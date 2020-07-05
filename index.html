@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77f8c16141.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Puzzle Board</h1>
+        <a href="#description">
+            <p class="white">Comenzar</p>
+            <i class="arrow fas fa-chevron-circle-down"></i>
+        </a>
+    </header>
+    <section id="description">
+        <div class="header">
+            <h2>¿Qué es Puzzle Board?</h2>
+        </div>
+        <div class='sectionContainer'>
+            <div class="textContainer">
+                <p class="text">
+                    Puzzle Board es una juego donde se coloca una imagen que estará cubierta por distintas piezas.
+                </p>
+                <p class="text">Al dar vuelta las piezas, aparecerán consignas a realizar. Una vez realizadas esas
+                    consignas, una
+                    porción de la imagen se hará visible.
+                </p>
+                <p class="text">
+                    ¡Completa todas las consignas para ver la imagen!
+                </p>
+            </div>
+            <div class="example">
+                <img class="imgExample" src="example.png" alt="ejemplo del juego"/>
+            </div>
+        </div>
+    </section>
+    <section id="instructions">
+        <div class="header">
+            <h2>Instrucciones</h2>
+        </div>
+        <div class="sectionContainer">
+            <div class="rulesContainer">
+                <h3>¿Qué hacer antes de empezar?</h3>
+                <ol class="rules">
+                    <li>Elegí una imagen que tengas en tu computadora.</li>
+                    <li>Elegí cuántas piezas querés que tenga.</li>
+                    <li>Colocá las consignas en cada pieza del tablero.</li>
+                    <li>¡Ya estas listo/a para jugar jugar!</li>
+                </ol>
+            </div>
+            <div class="rulesContainer">
+                <h3>¿Cómo jugar?</h3>
+                <ol class="rules">
+                    <li>Hacé click en alguna pieza.</li>
+                    <li>Una vez completada la consigna dada hace click en ¡Hecho!</li>
+                    <li>Continúa hasta descubrir la imagen</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section id="buildGame">
+        <div class="header">
+            <h2>¡Arma tu puzzle!</h2>
+        </div>
+        <div class="sectionContainer">
+            <form id="form">
+                <div class='top'>
+                    <div>
+                        <label for="piecesNumber">¿Cuántas piezas querés en tu Puzzle Board?</label>
+                        <select id="piecesNumber" name="select">
+                            <option value="12" selected>12</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="selectImage">Elige la imagen a descubrir:</label>
+                        <input type="file" id="userImage" name="avatar" accept="image/*">
+                    </div>
+                </div>
+                <div class="middle">
+                    <h4>Define las consignas para cada pieza</h4>
+                    <div id="tasksContainer">
+                        <div>
+                            <label for="pieceContent">1</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">2</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">3</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">4</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">5</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">6</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">7</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">8</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">9</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">10</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">11</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                        <div>
+                            <label for="pieceContent">12</label>
+                            <input class="tasks" type="textarea" />
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div id="getFormData" class="buttonLight">
+                        <p class="textButton">¡Crear!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="game">
+        <div class="header">
+            <h2>¡A Jugar!</h2>
+        </div>
+        <div id='gameContainer' class="container">
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+            <div class="pieza">
+                <p class="content"></p>
+                <div class="displayButton">
+                    <p>¡Hecho!</p>
+                </div>
+            </div>
+        </div>
+        <div id="refresh" class="buttonLight">
+            <p class="textButton">Armar otro Puzzle Board!</p>
+        </div>
+    </section>
+    <section id="footer">
+        
+    </section>
+
+    <!-- A PARTIR DE ACA ES VIEJO -->
+    <!-- <form id="form">
+        <h3>1</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>2</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>3</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>4</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>5</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>6</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>7</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>8</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>9</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>10</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>11</h3>
+        <input class="tasks" type="textarea" /><br>
+        <h3>12</h3>
+        <input class="tasks" type="textarea" /><br>
+    </form>
+    <button id="getFormData">¡Crear!</button>
+    <form id='backgroundImage' method="post" enctype="form-data">
+        <h3>Coloque aquí la imagen a descubrir:</h3>
+        <input type="file" id="userImage" name="avatar" accept="image/*">
+    </form>
+    <button id="getUserImage">Colocar</button>
+    <div id='gameContainer' class="container">
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+        <div class="pieza">
+            <p class="content"></p>
+            <div class="displayButton">
+                <p>¡Hecho!</p>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>

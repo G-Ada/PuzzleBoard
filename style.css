@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  padding: 0px;
+  margin: 0px; }
+
+p {
+  text-align: left;
+  font: Italic 20px Roboto;
+  letter-spacing: 0px;
+  color: #535353;
+  margin: 10px; }
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom right, #fb921a, #f6ef31);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 200px;
+  color: white;
+  text-shadow: 0px 3px 20px rgba(0, 0, 0, 0.522); }
+
+header > a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  header > a:hover {
+    text-shadow: 0px 3px 20px rgba(0, 0, 0, 0.522); }
+
+.white {
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: white; }
+
+.arrow {
+  font-size: 30px; }
+
+.header {
+  width: 100vw;
+  background-color: #f6ef31;
+  padding: 10px; }
+
+h2 {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  color: #535353;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 30px; }
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.textContainer {
+  width: 33%;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.161);
+  border: 1px solid #707070;
+  border-radius: 78px;
+  padding: 30px; }
+
+.text {
+  margin-left: 15px;
+  margin-right: 10px; }
+
+.example {
+  width: 40%; }
+
+.imgExample {
+  width: 100%; }
+
+.rulesContainer {
+  width: 40%;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.161);
+  border: 1px solid #707070;
+  border-radius: 78px;
+  padding: 30px;
+  height: min-content; }
+
+h3 {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #535353;
+  text-transform: uppercase; }
+
+ol {
+  padding: 20px;
+  list-style-position: inside;
+  text-align: center;
+  font: Italic 20px Roboto;
+  letter-spacing: 0px;
+  color: #535353;
+  margin: 10px; }
+
+li {
+  margin-bottom: 10px; }
+
+#form {
+  width: 85%;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.161);
+  border: 1px solid #707070;
+  border-radius: 78px;
+  padding: 60px; }
+
+label, h4 {
+  text-align: left;
+  font: Bold 20px Roboto;
+  letter-spacing: 0.9px;
+  color: #535353; }
+
+label {
+  margin-bottom: 10px; }
+
+.top {
+  display: flex;
+  flex-direction: row; }
+
+.top > div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-right: 30px;
+  justify-content: space-between; }
+
+#piecesNumber {
+  display: block;
+  width: min-content;
+  padding: 5px; }
+
+#tasksContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-evenly; }
+
+#tasksContainer > div {
+  margin: 10px;
+  width: 22%; }
+
+#tasksContainer > div > label {
+  margin: 5px; }
+
+input[type='textarea'] {
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  color: #535353; }
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px; }
+
+.buttonLight {
+  background-color: #f6ef31;
+  border: 1px solid #707070;
+  border-radius: 48px;
+  padding: 5px 15px 5px 15px; }
+  .buttonLight:hover {
+    cursor: pointer;
+    background-color: #fb921a; }
+  .buttonLight:active {
+    box-shadow: inset 5px -5px 10px rgba(0, 0, 0, 0.161); }
+
+#game {
+  display: none; }
+
+#gameContainer {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.container {
+  width: 90%;
+  height: 95vh;
+  border: 2px solid black;
+  background-image: url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/05/harry-potter-rpg-1951053.jpg?itok=ryZSRkv6");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.pieza {
+  position: relative;
+  background-color: #fb921a;
+  width: calc((100%) / 4);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .pieza:hover {
+    cursor: pointer; }
+
+.content {
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 50px;
+  color: #535353; }
+
+.displayButton {
+  background-color: #fb921a;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+  display: none; }
+  .displayButton:hover {
+    cursor: pointer; }
+
+.displayButton > p {
+  margin-top: 2px;
+  margin-bottom: 2px; }
+
+#refresh {
+  display: block;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 30px; }
+
+/*# sourceMappingURL=style.css.map */
