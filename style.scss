@@ -86,7 +86,6 @@ h2 {
 .textContainer {
     width: 33%;
     box-shadow: 0px 3px 20px $shadows;
-    border: 1px solid $borders;
     border-radius: 78px;
     padding: 30px;
 }
@@ -107,7 +106,6 @@ h2 {
 .rulesContainer {
     width: 40%;
     box-shadow: 0px 3px 20px $shadows;
-    border: 1px solid $borders;
     border-radius: 78px;
     padding: 30px;
     height: min-content;
@@ -139,7 +137,6 @@ li {
 #form {
     width: 85%;
     box-shadow: 0px 3px 20px $shadows;
-    border: 1px solid $borders;
     border-radius: 78px;
     padding: 60px;
 
@@ -207,9 +204,9 @@ input[type='textarea'] {
 
 .buttonLight {
     background-color: $color-light;
-    border: 1px solid $borders;
     border-radius: 48px;
     padding: 5px 15px 5px 15px;
+    box-shadow: 0px 3px 20px $shadows;
     &:hover {
         cursor: pointer;
         background-color:  $color-dark;
@@ -267,7 +264,7 @@ input[type='textarea'] {
 
 .displayButton {
     background-color: $color-dark;
-    border: 1px solid $borders;
+    box-shadow: 0px 3px 20px $shadows;
     border-radius: 20px;
     padding: 5px;
     padding-left: 15px;
@@ -289,5 +286,6 @@ input[type='textarea'] {
     width: max-content;
     margin: auto;
     margin-bottom: 30px;
+    box-shadow: 0px 3px 20px $shadows;
 }
 

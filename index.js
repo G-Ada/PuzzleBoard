@@ -31,11 +31,11 @@ function placeTask(task, cont, num) {
         cont.style.fontWeight = '400'
         cont.style.fontSize = '18px'
         cont.innerHTML = task[num]
-    }, 500);
+    }, 200);
 }
 
 function changePieza(pieza) {
-    pieza.style.transition = "all 0.5s ease 0.5s"
+    pieza.style.transition = "all 0.2s ease 0.2s"
     pieza.style.backgroundColor = 'rgb(246, 239, 49)'
 }
 
@@ -152,12 +152,12 @@ function event(){
             placeTask(tasksArray, CONTENT[i], i)
             setTimeout(() => {
                 showButton(PIEZAS[i])
-            }, 500);
+            }, 200);
         })
     }
     for (let i = 0; i < DISPLAY_BUTTON.length; i++) {
         DISPLAY_BUTTON[i].addEventListener('click', (ev) => {
-            PIEZAS[i].style.transition = 'all 0.5s ease 0.5s'
+            PIEZAS[i].style.transition = 'all 0.2s ease 0.2s'
             PIEZAS[i].style.visibility = 'hidden'
         })
     }
